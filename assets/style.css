@@ -362,7 +362,7 @@ form .bg-transparent:focus-visible {
 
 
 @media screen and (max-width:547px) {
-  .d-sm-block {
+  .d-sd-block {
     display: block !important;
   }
 }

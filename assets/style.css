@@ -251,10 +251,13 @@ form .bg-transparent {
   margin-top: 2rem;
   padding: 1rem;
   width: 100%;
+  color: white;
 }
 
 form .bg-transparent:focus-visible {
   border: none;
+  outline: none;
+  background-color: rgba(111, 104, 104, 0.202) !important;
   border-bottom: 2px solid white;
 }
 
@@ -316,6 +319,22 @@ form .bg-transparent:focus-visible {
 
 /* banner end */
 
+#experience,
+#skills,
+#project,
+#education,
+#services,
+#contact {
+  display: none;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
 
 @media screen and (max-width:991px) {
 
@@ -333,6 +352,7 @@ form .bg-transparent:focus-visible {
 
   section {
     padding: 2rem 0;
+    padding-top: 5rem;
     height: fit-content !important;
     width: fit-content !important;
   }
@@ -343,11 +363,11 @@ form .bg-transparent:focus-visible {
   }
 
   .skill-sec {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .banner-sec {
-    padding-top: 5rem;
     height: 100% !important;
   }
 
@@ -364,5 +384,12 @@ form .bg-transparent:focus-visible {
 @media screen and (max-width:547px) {
   .d-sd-block {
     display: block !important;
+  }
+
+  .project-sec,
+  .project-sec .item-1,
+  .project-sec .item-2,
+  .project-sec .item-3 {
+    max-height: 30rem;
   }
 }

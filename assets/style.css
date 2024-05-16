@@ -77,11 +77,6 @@ body {
   height: 100%;
 }
 
-.skill-sec .skillOverflow {
-  background-color: #0000009c;
-  width: 100%;
-  height: 100%;
-}
 
 .experienceBoxArea {
   border: 2px solid white;
@@ -290,7 +285,7 @@ form .bg-transparent:focus-visible {
 }
 
 
-/* banner start */
+/* social sec start */
 
 .social-sec {
   position: fixed;
@@ -317,7 +312,13 @@ form .bg-transparent:focus-visible {
   z-index: 2;
 }
 
-/* banner end */
+/* social sec end */
+.skillOverflow,
+.bannerOverlay {
+  background-color: #0000009c;
+  width: 100%;
+  height: 100%;
+}
 
 #experience,
 #skills,

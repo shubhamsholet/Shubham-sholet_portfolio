@@ -17,6 +17,7 @@ var sectionId = ["home", "experience", "skills", "project", "education", "servic
 
 console.log("sectionId", sectionId)
 
+
 var windowfunction = window.addEventListener("wheel", function (moment) {
     // console.log("moment", moment)
     // console.log("moment.wheelDeltaY===", moment.wheelDeltaY)
@@ -29,6 +30,7 @@ var windowfunction = window.addEventListener("wheel", function (moment) {
 
     var indexOfId = sectionId.indexOf(currentId)
     // console.log("indexOfId====", indexOfId);
+
 
     if (moment.wheelDeltaY < 0 && indexOfId < sectionId.length - 1) {
         var nextIdvalue = sectionId[indexOfId + 1];
@@ -43,7 +45,7 @@ var windowfunction = window.addEventListener("wheel", function (moment) {
 
     if (moment.wheelDeltaY > 0 && indexOfId > 0) {
         var nextIdvalue = sectionId[indexOfId - 1];
-        console.log("nextIdvalue 123====", nextIdvalue);
+        console.log("nextIdvalue reverse====", nextIdvalue);
 
         document.getElementById(nextIdvalue).classList.add("d-block");
         document.getElementById(nextIdvalue).classList.remove("d-none");

@@ -11,7 +11,6 @@ body {
   width: 100%;
   color: white;
   background-color: black;
-  overflow: hidden;
 }
 
 .row {
@@ -344,7 +343,7 @@ form .bg-transparent:focus-visible {
 #education,
 #services,
 #contact {
-  display: none;
+  /* display: none; */
   height: 105vh !important;
 }
 

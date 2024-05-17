@@ -19,9 +19,14 @@ console.log("sectionId", sectionId)
 
 
 var windowfunction = window.addEventListener("wheel", function (moment) {
-    // console.log("moment", moment)
+    console.log("moment", moment)
+    console.log("momenty", moment.y)
     // console.log("moment.wheelDeltaY===", moment.wheelDeltaY)
+    var viewheight = this.window.innerHeight
+    console.log("viewheight === ", viewheight);
 
+
+    var currentelement = document.querySelector('.d-block');
     var currentId = document.querySelector('.d-block').id;
     // console.log("currentId====", currentId);
 
@@ -31,6 +36,21 @@ var windowfunction = window.addEventListener("wheel", function (moment) {
     var indexOfId = sectionId.indexOf(currentId)
     // console.log("indexOfId====", indexOfId);
 
+
+    // Get the bounding rectangle
+    var rect = currentelement.getBoundingClientRect()
+
+    // Log the properties of the bounding rectangle
+    // console.log('Top:', rect.top);
+    // console.log('Right:', rect.right);
+    // console.log('Bottom:', rect.bottom);
+    // console.log('Left:', rect.left);
+    // console.log('Width:', rect.width);
+    // console.log('Height:', rect.height);
+
+
+    var sectionHeightView = Math.min(rect.height, viewheight - rect.top)
+    console.log("sectionHeightView === ", sectionHeightView);
 
     if (moment.wheelDeltaY < (-100) && indexOfId < sectionId.length - 1) {
         var nextIdvalue = sectionId[indexOfId + 1];

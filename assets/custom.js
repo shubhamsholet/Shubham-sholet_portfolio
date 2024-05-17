@@ -32,24 +32,33 @@ var windowfunction = window.addEventListener("wheel", function (moment) {
     // console.log("indexOfId====", indexOfId);
 
 
-    if (moment.wheelDeltaY < 0 && indexOfId < sectionId.length - 1) {
+    if (moment.wheelDeltaY < (-100) && indexOfId < sectionId.length - 1) {
         var nextIdvalue = sectionId[indexOfId + 1];
         console.log("nextIdvalue====", nextIdvalue);
 
-        document.getElementById(nextIdvalue).classList.add("d-block");
+        document.getElementById(nextIdvalue).classList.add("d-block", "transition");
         document.getElementById(nextIdvalue).classList.remove("d-none");
-        document.getElementById(currentId).classList.remove("d-block");
+        document.getElementById(currentId).classList.remove("d-block", "transition");
         document.getElementById(currentId).classList.add("d-none");
-
+        gsap.from(".transition", {
+            opacity: 0,
+            y: "30%",
+        })
     }
 
-    if (moment.wheelDeltaY > 0 && indexOfId > 0) {
+    if (moment.wheelDeltaY > 100 && indexOfId > 0) {
         var nextIdvalue = sectionId[indexOfId - 1];
         console.log("nextIdvalue reverse====", nextIdvalue);
 
-        document.getElementById(nextIdvalue).classList.add("d-block");
+        document.getElementById(nextIdvalue).classList.add("d-block", "transition");
         document.getElementById(nextIdvalue).classList.remove("d-none");
-        document.getElementById(currentId).classList.remove("d-block");
+        document.getElementById(currentId).classList.remove("d-block", "transition");
         document.getElementById(currentId).classList.add("d-none");
+        gsap.from(".transition", {
+            opacity: 0,
+            y: "-30%",
+        })
     }
 })
+
+

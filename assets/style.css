@@ -330,8 +330,7 @@ form .bg-transparent:focus-visible {
 }
 
 /* social sec end */
-.skillOverflow,
-.bannerOverlay {
+.overlayall {
   background-color: #0000009c;
   width: 100%;
   height: 100%;

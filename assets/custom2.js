@@ -107,3 +107,6 @@ for (let i = 0; i < animatedElements.length; i++) {
         });
     });
 }
+
+
+

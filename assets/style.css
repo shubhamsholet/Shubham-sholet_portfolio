@@ -401,8 +401,6 @@ form .bg-transparent:focus-visible {
   }
 
   section {
-    padding: 2rem 0;
-    padding-top: 5rem;
     height: fit-content !important;
     width: fit-content !important;
   }
@@ -428,18 +426,33 @@ form .bg-transparent:focus-visible {
   .expYear p {
     font-size: 50px;
   }
-}
 
-
-@media screen and (max-width:547px) {
   .d-sd-block {
     display: block !important;
   }
 
-  .project-sec,
-  .project-sec .item-1,
-  .project-sec .item-2,
-  .project-sec .item-3 {
-    max-height: 30rem;
+  #experience,
+  #skills,
+  #project,
+  #education,
+  #services,
+  #contact {
+    min-height: 105vh !important;
+    height: fit-content !important;
+  }
+
+  .overlayall {
+    padding: 2rem 0;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .project-sec #carouselExampleCaptions,
+  .project-sec .carousel-inner {
+    min-height: 95vh;
+  }
+
+  .experienceBoxArea {
+    border-right: 2px solid transparent;
   }
 }

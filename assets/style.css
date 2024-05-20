@@ -369,7 +369,7 @@ form .bg-transparent:focus-visible {
 
 
 #home {
-  /* height: 105vh !important; */
+  height: 105vh !important;
 }
 
 .d-block {

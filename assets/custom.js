@@ -1,7 +1,4 @@
-// // target id on scroll
-// var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-//     target: '#navbarTargetId'
-// });
+
 
 // // display section on scrool
 

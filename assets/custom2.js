@@ -1,3 +1,12 @@
+// target id on scroll
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbarTargetId'
+});
+
+
+
+// typed js
+
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Typed.js
     var typed = new Typed('#typed-output', {

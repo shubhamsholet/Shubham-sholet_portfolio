@@ -107,8 +107,12 @@ html {
   height: 100%;
 }
 
+.banner-sec .name {
+  font-size: 45px;
+}
+
 .designation span {
-  font-size: 19px;
+  font-size: 23px;
 }
 
 /* banner end */
@@ -404,12 +408,14 @@ form .bg-transparent:focus-visible {
 #services,
 #contact {
   /* display: none; */
-  height: 105vh !important;
+  height: fit-content !;
+  min-height: 105vh !important;
 }
 
 
 #home {
-  height: 105vh !important;
+  height: fit-content;
+  min-height: 105vh !important;
 }
 
 .d-block {
@@ -464,7 +470,7 @@ form .bg-transparent:focus-visible {
   }
 
   .expYear p {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .d-sd-block {

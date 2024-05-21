@@ -20,7 +20,7 @@ gsap.utils.toArray('section').forEach((section, i) => {
                 targets: '#structure-header',
                 className: colorClass
             },
-            markers: true
+            // markers: true
         })
 
     }

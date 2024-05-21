@@ -325,29 +325,12 @@ form .bg-transparent:focus-visible {
 
 /* social sec start */
 
-.social-sec {
-  position: fixed;
-  left: 10%;
-  height: 60%;
-  top: 20%;
-  border-left: 0.2rem solid white;
-}
 
-.social-sec i {
-  font-size: 50px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.social-icon {
+  font-size: 30px;
   background-color: black;
   border-radius: 50%;
   border: none;
-  color: white;
-}
-
-.socialLinks {
-  top: 30%;
-  background-color: transparent;
-  left: -1.5rem;
-  z-index: 2;
 }
 
 /* social sec end */

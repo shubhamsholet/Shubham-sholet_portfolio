@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 // JavaScript to animate progress bar
 
 

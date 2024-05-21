@@ -495,7 +495,7 @@ form .bg-transparent:focus-visible {
 
   .project-sec #carouselExampleCaptions,
   .project-sec .carousel-inner {
-    min-height: 95vh;
+    min-height: auto;
   }
 
   .experienceBoxArea {

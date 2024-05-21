@@ -27,7 +27,24 @@ gsap.utils.toArray('section').forEach((section, i) => {
 
 });
 
+// navbar toggle js 
 
+document.addEventListener("DOMContentLoaded", function () {
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    var navbarCollapse = document.querySelector("#navbarSupportedContent");
+
+    navbarToggler.addEventListener("click", function () {
+        navbarCollapse.classList.toggle("show");
+    });
+
+    // Add event listener to the parent element
+    navbarCollapse.addEventListener("click", function (event) {
+        // Check if the clicked element is inside navbarToggler
+        if (!event.target.closest('.navbar-toggler') && navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+        }
+    });
+});
 
 
 // typed js
@@ -67,6 +84,10 @@ for (let i = 1; i <= 6; i++) {
 }
 
 
+
+
+
+// for border animate
 
 var isFocused = false;
 // Get all elements with the class name "animatedElement"

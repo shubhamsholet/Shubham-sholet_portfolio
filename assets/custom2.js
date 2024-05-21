@@ -4,6 +4,31 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 });
 
 
+// page change on scroll gsap
+
+gsap.utils.toArray('section').forEach((section, i) => {
+
+    if (section.getAttribute('data-header-nav') !== null) {
+
+        var colorClass = section.getAttribute('data-header-nav')
+
+        ScrollTrigger.create({
+            trigger: section,
+            start: 'top top',
+            end: 'bottom top',
+            toggleClass: {
+                targets: '#structure-header',
+                className: colorClass
+            },
+            markers: true
+        })
+
+    }
+
+});
+
+
+
 
 // typed js
 

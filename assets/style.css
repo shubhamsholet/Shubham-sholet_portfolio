@@ -18,6 +18,63 @@ body {
   padding-right: 0.5rem;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
+#structure-header {
+  transition: ease-in-out background 300ms;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.3s;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        padding: 0.5rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: sans-serif;
+
+        transition: color 0.3s;
+
+      }
+    }
+  }
+
+}
+
+#structure-content {
+
+  section {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+
+    &.dark {
+      background-color: #000;
+      color: #fff;
+    }
+
+  }
+
+}
+
 /* navbar start */
 .navberSec {
   position: fixed;

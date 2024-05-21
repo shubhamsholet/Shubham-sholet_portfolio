@@ -574,15 +574,21 @@
             </div>
             <div class=" mt-2 col-lg-6 col-md-12 col-sm-12 pt-5 ">
               <h4>"Get in Touch: Reach Out Using the Contact Form"</h4>
-              <form action="">
-                <input type="text" class="bg-transparent " placeholder="Name"> <br>
-                <input type="email" class="bg-transparent " placeholder="Email"><br>
-                <textarea name="" rows="3" class="bg-transparent " placeholder="Message" id=""></textarea>
-                <button type="submit" class="btnDesign mt-5">
-                  Send Message
-                </button>
-              </form>
 
+              <!-- modify this form HTML and place wherever you want your form -->
+              <form action="https://formspree.io/f/xdoqvkpn" method="POST">
+                <label class="w-100">
+                  <input type="text" name="name" class="bg-transparent " placeholder="Name">
+                </label> <br>
+                <label class="w-100">
+                  <input type="email" name="email" class="bg-transparent" placeholder="Email">
+                </label> <br>
+                <label class="w-100">
+                  <textarea name="message" rows="2" class="bg-transparent " placeholder="Message"></textarea>
+                </label> <br>
+                <!-- your other form fields go here -->
+                <button type="submit" class="btnDesign mt-5">Send Message</button>
+              </form>
             </div>
           </div>
         </div>

@@ -1,81 +1,145 @@
+// target id on scroll
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbarTargetId'
+});
 
 
-// // display section on scrool
+// page change on scroll gsap
 
-// var home = document.getElementById("home");
-// var experience = document.getElementById("experience");
-// var skills = document.getElementById("skills");
-// var project = document.getElementById("project");
-// var education = document.getElementById("education");
-// var services = document.getElementById("services");
-// var contact = document.getElementById("contact");
+gsap.utils.toArray('section').forEach((section, i) => {
 
-// var sectionId = ["home", "experience", "skills", "project", "education", "services", "contact"]
+    if (section.getAttribute('data-header-nav') !== null) {
 
-// console.log("sectionId", sectionId)
+        var colorClass = section.getAttribute('data-header-nav')
 
+        ScrollTrigger.create({
+            trigger: section,
+            start: 'top top',
+            end: 'bottom top',
+            toggleClass: {
+                targets: '#structure-header',
+                className: colorClass
+            },
+            markers: true
+        })
 
-// var windowfunction = window.addEventListener("wheel", function (moment) {
-//     console.log("moment", moment)
-//     console.log("momenty", moment.y)
-//     // console.log("moment.wheelDeltaY===", moment.wheelDeltaY)
-//     var viewheight = this.window.innerHeight
-//     console.log("viewheight === ", viewheight);
+    }
 
-
-//     var currentelement = document.querySelector('.d-block');
-//     var currentId = document.querySelector('.d-block').id;
-//     // console.log("currentId====", currentId);
-
-//     var check = sectionId.includes(currentId)
-//     // console.log("check====", check);
-
-//     var indexOfId = sectionId.indexOf(currentId)
-//     // console.log("indexOfId====", indexOfId);
+});
 
 
-//     // Get the bounding rectangle
-//     var rect = currentelement.getBoundingClientRect()
-
-//     // Log the properties of the bounding rectangle
-//     // console.log('Top:', rect.top);
-//     // console.log('Right:', rect.right);
-//     // console.log('Bottom:', rect.bottom);
-//     // console.log('Left:', rect.left);
-//     // console.log('Width:', rect.width);
-//     // console.log('Height:', rect.height);
 
 
-//     var sectionHeightView = Math.min(rect.height, viewheight - rect.top)
-//     console.log("sectionHeightView === ", sectionHeightView);
+// typed js
 
-//     if (moment.wheelDeltaY < (-100) && indexOfId < sectionId.length - 1) {
-//         var nextIdvalue = sectionId[indexOfId + 1];
-//         console.log("nextIdvalue====", nextIdvalue);
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Typed.js
+    var typed = new Typed('#typed-output', {
+        strings: ["Front-end Web Developer", "Web Designer", "Freelancer"],
+        typeSpeed: 50, // typing speed in milliseconds
+        backSpeed: 25, // backspacing speed in milliseconds
+        loop: true // loop the typing effect
+    });
+});
 
-//         document.getElementById(nextIdvalue).classList.add("d-block", "transition");
-//         document.getElementById(nextIdvalue).classList.remove("d-none");
-//         document.getElementById(currentId).classList.remove("d-block", "transition");
-//         document.getElementById(currentId).classList.add("d-none");
-//         gsap.from(".transition", {
-//             opacity: 0,
-//             y: "30%",
-//         })
-//     }
 
-//     if (moment.wheelDeltaY > 100 && indexOfId > 0) {
-//         var nextIdvalue = sectionId[indexOfId - 1];
-//         console.log("nextIdvalue reverse====", nextIdvalue);
+// JavaScript to animate progress bar
 
-//         document.getElementById(nextIdvalue).classList.add("d-block", "transition");
-//         document.getElementById(nextIdvalue).classList.remove("d-none");
-//         document.getElementById(currentId).classList.remove("d-block", "transition");
-//         document.getElementById(currentId).classList.add("d-none");
-//         gsap.from(".transition", {
-//             opacity: 0,
-//             y: "-30%",
-//         })
-//     }
-// })
+
+for (let i = 1; i <= 6; i++) {
+    document.addEventListener('DOMContentLoaded', function () {
+        var progressBar = document.querySelector('.progress-bar' + i);
+        // console.log("Iteration " + (i + 1));
+
+        //   console.log("progressBar === ", progressBar);
+        //  console.log("progressBar.aria-valuenow", i, "===", progressBar.ariaValueNow);
+        var width = 1;
+        var interval = setInterval(function () {
+            if (width >= progressBar.ariaValueNow) {
+                clearInterval(interval);
+            } else {
+                width++;
+                progressBar.style.width = width + '%';
+            }
+        }, 50);
+
+    });
+}
+
+
+
+var isFocused = false;
+// Get all elements with the class name "animatedElement"
+var animatedElements = document.getElementsByClassName("animatedElement");
+
+// Loop through the collection of elements
+for (let i = 0; i < animatedElements.length; i++) {
+    animatedElements[i].addEventListener("mouseenter", function () {
+        isFocused = true;
+        // console.log("mouseenter === 1");
+        gsap.to(this, {
+            borderTopColor: "white",
+            duration: 0.3,
+            onComplete: () => { // Use arrow function to retain the correct context
+                if (!isFocused) return;
+                // console.log("mouseenter === 2");
+                gsap.to(this, { // Use `this` instead of `this.target`
+                    borderLeftColor: "white",
+                    duration: 0.3,
+                    onComplete: () => { // Use arrow function
+                        if (!isFocused) return;
+                        // console.log("mouseenter === 3");
+                        gsap.to(this, { // Use `this` instead of `this.target`
+                            borderBottomColor: "white",
+                            duration: 0.3,
+                            onComplete: () => { // Use arrow function
+                                if (!isFocused) return;
+                                // console.log("mouseenter === 4");
+                                gsap.to(this, { // Use `this` instead of `this.target`
+                                    borderRightColor: "white",
+                                    duration: 0.3
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    });
+
+    // Reset border colors on mouse leave
+    animatedElements[i].addEventListener("mouseleave", function () {
+        // console.log("mouseleave === ");
+        isFocused = false; // Set the flag to false when the mouse leaves
+        gsap.killTweensOf(this); // Stop any ongoing animations on this element
+        gsap.to(this, {
+            borderRightColor: "transparent",
+            duration: 0.3,
+            onComplete: () => { // Use arrow function to retain the correct context
+                // console.log("onComplete === 1");
+                gsap.to(this, { // Use `this` instead of `this.target`
+                    borderBottomColor: "transparent",
+                    duration: 0.3,
+                    onComplete: () => { // Use arrow function
+                        // console.log("onComplete === 2");
+                        gsap.to(this, { // Use `this` instead of `this.target`
+                            borderLeftColor: "transparent",
+                            duration: 0.3,
+                            onComplete: () => { // Use arrow function
+                                // console.log("onComplete === 3");
+                                gsap.to(this, { // Use `this` instead of `this.target`
+                                    borderTopColor: "transparent",
+                                    duration: 0.3
+                                });
+                            }
+                        });
+                    }
+                });
+            },
+
+        });
+    });
+}
+
 
 

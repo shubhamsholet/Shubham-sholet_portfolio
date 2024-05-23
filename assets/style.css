@@ -115,6 +115,10 @@ html {
   font-size: 23px;
 }
 
+.mainProfileImg {
+  display: none;
+}
+
 /* banner end */
 /* experience start */
 
@@ -503,5 +507,19 @@ form .bg-transparent:focus-visible {
     min-height: 105vh !important;
     display: flex;
     align-items: center;
+  }
+
+  .services-sec .carousel-control-next {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .mainProfileImg {
+    display: block;
+  }
+
+  .banner-sec {
+    background-image: none;
   }
 }

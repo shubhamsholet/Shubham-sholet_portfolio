@@ -60,31 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// JavaScript to animate progress bar
-
-
-// for (let i = 1; i <= 6; i++) {
-//     document.addEventListener('DOMContentLoaded', function () {
-//         var progressBar = document.querySelector('.progress-bar' + i);
-//         // console.log("Iteration " + (i + 1));
-
-//         //   console.log("progressBar === ", progressBar);
-//         //  console.log("progressBar.aria-valuenow", i, "===", progressBar.ariaValueNow);
-//         var width = 1;
-//         var interval = setInterval(function () {
-//             if (width >= progressBar.ariaValueNow) {
-//                 clearInterval(interval);
-//             } else {
-//                 width++;
-//                 progressBar.style.width = width + '%';
-//             }
-//         }, 50);
-
-//     });
-// }
-
-
-
 
 
 // for border animate
@@ -169,48 +144,32 @@ for (let i = 0; i < animatedElements.length; i++) {
 
 
 gsap.to(".skill-sec ", {
-    opacity: 0.5,
+    // opacity: 0.5,
     duration: 1,
     scrollTrigger: {
         trigger: ".skill-sec ",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 1%",
         end: "top 10%",
-        scrub: true,
+        // scrub: true,
         onEnter: myFunction // Pass your function here
     }
 })
 
 function myFunction() {
-    console.log("Triggered!");
-
+    // console.log("Triggered!");
     for (let i = 1; i <= 6; i++) {
-        document.addEventListener('readystatechange', function () {
-            var progressBar = document.querySelector('.progress-bar' + i);
-            // console.log("Iteration " + (i + 1));
-
-            //   console.log("progressBar === ", progressBar);
-            //  console.log("progressBar.aria-valuenow", i, "===", progressBar.ariaValueNow);
-            var width = 1;
-            var interval = setInterval(function () {
-                if (width >= progressBar.ariaValueNow) {
-                    clearInterval(interval);
-                } else {
-                    width++;
-                    progressBar.style.width = width + '%';
-                }
-            }, 50);
-
-        });
+        let progressBar = document.querySelector('.progress-bar' + i); // Use 'let' instead of 'var'
+        let width = 1;
+        let interval = setInterval(function () {
+            if (width >= progressBar.ariaValueNow) {
+                clearInterval(interval);
+            } else {
+                width++;
+                progressBar.style.width = width + '%';
+            }
+        }, 50);
     }
 }
 
-
-// const allEvents = [
-//     'abort', 'animationend', 'animationiteration', 'animationstart', 'auxclick', 'blur',
-//     'change', 'click', 'close', 'contextmenu', 'dblclick', 'error', 'focus', 'input', 'invalid',
-//     'keydown', 'keypress', 'keyup', 'load', 'mousedown', 'mouseenter', 'mouseleave', 'mousemove',
-//     'mouseout', 'mouseover', 'mouseup', 'pause', 'play', 'reset', 'resize', 'scroll', 'submit',
-//     'touchcancel', 'touchend', 'touchmove', 'touchstart', 'transitionend', 'wheel'
-//   ];

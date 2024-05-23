@@ -491,6 +491,7 @@ form .bg-transparent:focus-visible {
     padding: 2rem 0;
     padding-top: 5rem;
     padding-bottom: 2rem;
+    min-height: 105vh !important;
   }
 
   .project-sec #carouselExampleCaptions,
@@ -500,5 +501,11 @@ form .bg-transparent:focus-visible {
 
   .experienceBoxArea {
     border-right: 2px solid transparent;
+  }
+
+  .respoHeight {
+    min-height: 105vh !important;
+    display: flex;
+    align-items: center;
   }
 }

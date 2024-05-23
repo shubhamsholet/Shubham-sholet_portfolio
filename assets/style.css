@@ -517,9 +517,14 @@ form .bg-transparent:focus-visible {
 @media screen and (max-width:576px) {
   .mainProfileImg {
     display: block;
+    margin-bottom: 1rem;
   }
 
   .banner-sec {
-    background-image: none;
+    background-image: none !important;
+  }
+
+  .banner-sec .name {
+    font-size: 40px !important;
   }
 }

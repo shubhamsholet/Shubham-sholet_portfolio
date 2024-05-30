@@ -9,8 +9,8 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 gsap.utils.toArray('section').forEach((section, i) => {
 console.log("window.innerWidth === ",window.innerWidth,window.innerWidth >= 600);
     if (section.getAttribute('data-header-nav') !== null && window.innerWidth >= 600) {
-
         var colorClass = section.getAttribute('data-header-nav')
+console.log("colorClass === ",colorClass);
 
         ScrollTrigger.create({
             trigger: section,

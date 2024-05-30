@@ -527,4 +527,11 @@ form .bg-transparent:focus-visible {
   .banner-sec .name {
     font-size: 40px !important;
   }
+
+   section {
+    scroll-snap-align: none !important;
+
+  }
+
+  
 }

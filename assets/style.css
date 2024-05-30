@@ -22,7 +22,7 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-/* #structure-header {
+#structure-header {
   transition: ease-in-out background 300ms;
   position: fixed;
   top: 0;
@@ -53,7 +53,7 @@ html {
     }
   }
 
-} */
+}
 
 #structure-content {
 
@@ -527,50 +527,4 @@ form .bg-transparent:focus-visible {
   .banner-sec .name {
     font-size: 40px !important;
   }
-
-
-
-
-  #structure-header {
-  transition: none;
-  position: static; 
-  width: 100%; 
-  transition: none;
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline-block;
-
-      a {
-        padding: 0.5rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-family: sans-serif;
-
-        transition: color 0.3s;
-
-      }
-    }
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 }

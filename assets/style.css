@@ -22,7 +22,7 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-#structure-header {
+/* #structure-header {
   transition: ease-in-out background 300ms;
   position: fixed;
   top: 0;
@@ -53,7 +53,7 @@ html {
     }
   }
 
-}
+} */
 
 #structure-content {
 

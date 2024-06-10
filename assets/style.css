@@ -195,9 +195,8 @@ html {
   width: 100%;
 }
 
-.project-sec .item-1 {
-  background-image: url(./images/guitar-bg.jpeg);
-}
+
+
 
 .project-sec .item-2 {
   background-image: url(./images/test-1.jpeg);
@@ -205,6 +204,10 @@ html {
 
 .project-sec .item-3 {
   background-image: url(./images/test-2.jpeg);
+}
+
+.project-sec .item-4 {
+  background-image: url(./images/guitar-bg.jpeg);
 }
 
 /* .project-sec .carousel-indicators {
@@ -528,10 +531,10 @@ form .bg-transparent:focus-visible {
     font-size: 40px !important;
   }
 
-   section {
+  section {
     scroll-snap-align: none !important;
 
   }
 
-  
+
 }

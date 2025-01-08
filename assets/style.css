@@ -445,6 +445,7 @@ form .bg-transparent:focus-visible {
 }
 .experience-sec{
   padding-top: 10rem !important;
+  min-height: 188vh !important;
 }
 @media screen and (max-width:991px) {
 

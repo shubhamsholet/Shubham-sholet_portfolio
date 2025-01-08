@@ -443,7 +443,9 @@ form .bg-transparent:focus-visible {
   border: 1rem solid transparent;
   transition: border-color 0.3s;
 }
-
+.experience-sec{
+  padding-top: 25rem;
+}
 @media screen and (max-width:991px) {
 
   .navbar-nav {
@@ -519,6 +521,9 @@ form .bg-transparent:focus-visible {
 
   .services-sec .carousel-control-next {
     left: 30%;
+  }
+  .experience-sec{
+    padding-top: 5rem;
   }
 }
 

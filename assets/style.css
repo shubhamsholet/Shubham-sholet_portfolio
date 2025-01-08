@@ -421,7 +421,7 @@ form .bg-transparent:focus-visible {
 #contact {
   /* display: none; */
   height: fit-content !;
-  min-height: 115vh !important;
+  min-height: 130vh !important;
 }
 
 

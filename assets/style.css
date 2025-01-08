@@ -421,13 +421,13 @@ form .bg-transparent:focus-visible {
 #contact {
   /* display: none; */
   height: fit-content !;
-  min-height: 130vh !important;
+  min-height: 150vh !important;
 }
 
 
 #home {
   height: fit-content;
-  min-height: 105vh !important;
+  min-height: 115vh !important;
 }
 
 .d-block {
@@ -491,7 +491,7 @@ form .bg-transparent:focus-visible {
   #education,
   #services,
   #contact {
-    min-height: 105vh !important;
+    min-height: 150vh !important;
     height: fit-content !important;
   }
 
@@ -499,7 +499,7 @@ form .bg-transparent:focus-visible {
     padding: 2rem 0;
     padding-top: 5rem;
     padding-bottom: 2rem;
-    min-height: 105vh !important;
+    min-height: 150vh !important;
   }
 
   .project-sec #carouselExampleCaptions,
@@ -512,7 +512,7 @@ form .bg-transparent:focus-visible {
   }
 
   .respoHeight {
-    min-height: 105vh !important;
+    min-height: 150vh !important;
     display: flex;
     align-items: center;
   }

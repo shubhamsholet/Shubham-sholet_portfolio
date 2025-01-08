@@ -60,9 +60,9 @@ html {
   section {
     scroll-snap-align: start;
     width: 100vw;
-    min-width: fit-content;
+    min-width: fit-content !important;
     height: 100vh;
-    min-height: fit-content;
+    min-height: fit-content !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -444,7 +444,7 @@ form .bg-transparent:focus-visible {
   transition: border-color 0.3s;
 }
 .experience-sec{
-  padding-top: 15rem !important;
+  padding-top: 10rem !important;
 }
 @media screen and (max-width:991px) {
 

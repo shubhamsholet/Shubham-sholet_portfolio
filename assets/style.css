@@ -60,7 +60,9 @@ html {
   section {
     scroll-snap-align: start;
     width: 100vw;
+    min-width: fit-content;
     height: 100vh;
+    min-height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;

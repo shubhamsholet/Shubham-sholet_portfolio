@@ -111,7 +111,7 @@ html {
 }
 
 .banner-sec .name {
-  font-size: 45px;
+  font-size: 32px;
 }
 
 .designation span {
@@ -157,7 +157,7 @@ html {
 }
 
 .expYear p {
-  font-size: 90px;
+  font-size: 70px;
   line-height: 1;
 }
 
@@ -175,7 +175,7 @@ html {
 }
 
 .aboutDet {
-  font-size: 80px;
+  font-size: 65px;
 }
 
 .skillsProgress {
@@ -277,11 +277,11 @@ iframe {
 }
 
 .educard .title p {
-  font-size: 23px;
+  font-size: 18px;
 }
 
 .educard .passYear p {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 
@@ -329,7 +329,7 @@ iframe {
   justify-content: center;
   background: #00000033;
   color: var(--primary);
-  font-size: 100px;
+  font-size: 75px;
   padding: 1rem;
   border-radius: 0.2rem;
 }
@@ -398,7 +398,7 @@ form .bg-transparent:focus-visible {
 
 
 .social-icon {
-  font-size: 30px;
+  font-size: 24px;
   background-color: black;
   border-radius: 50%;
   border: none;
@@ -481,7 +481,7 @@ form .bg-transparent:focus-visible {
   }
 
   .expYear p {
-    font-size: 40px;
+    font-size: 24px;
   }
 
   .d-sd-block {
@@ -539,7 +539,7 @@ form .bg-transparent:focus-visible {
   }
 
   .banner-sec .name {
-    font-size: 40px !important;
+    font-size: 32px !important;
   }
 
   section {

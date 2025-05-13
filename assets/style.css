@@ -57,14 +57,15 @@ html {
     scroll-snap-align: start;
     width: 100%;
     min-width: 100%;
-    min-height: 100vh;
-    height: auto;
+    height: 100vh;
+    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     position: relative;
     box-sizing: border-box;
+    padding-bottom: 2rem;
 
     &.dark {
       background-color: #000;
@@ -444,7 +445,6 @@ form .bg-transparent:focus-visible {
 
   section {
     height: fit-content !important;
-    min-height: fit-content !important;
     width: fit-content !important;
   }
 
@@ -526,6 +526,5 @@ form .bg-transparent:focus-visible {
 
   section {
     scroll-snap-align: none !important;
-     min-height: fit-content !important;
   }
 }

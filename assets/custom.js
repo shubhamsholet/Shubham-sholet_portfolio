@@ -169,7 +169,7 @@ function myFunction() {
                 width++;
                 progressBar.style.width = width + '%';
             }
-        }, 50);
+        }, 20);
     }
 }
 

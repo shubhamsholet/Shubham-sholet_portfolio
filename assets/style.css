@@ -48,21 +48,18 @@ html {
         font-family: sans-serif;
 
         transition: color 0.3s;
-
       }
     }
   }
-
 }
 
 #structure-content {
-
   section {
     scroll-snap-align: start;
     width: 100%;
-    min-width: fit-content !important;
+    min-width: fit-content;
+    min-height: fit-content;
     height: 100vh;
-    min-height: fit-content !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,9 +70,7 @@ html {
       background-color: #000;
       color: #fff;
     }
-
   }
-
 }
 
 /* navbar start */
@@ -94,7 +89,7 @@ html {
 }
 
 .navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .show>.nav-link {
+.navbar-dark .navbar-nav .show > .nav-link {
   color: red;
 }
 
@@ -138,7 +133,6 @@ html {
 
 /* experience end */
 
-
 /* about start */
 .skill-sec {
   background-image: url(./images/skills-bg.jpeg);
@@ -148,7 +142,6 @@ html {
   width: 100%;
   height: 100%;
 }
-
 
 .experienceBoxArea {
   border: 2px solid transparent;
@@ -197,8 +190,6 @@ html {
   height: 100%;
   width: 100%;
 }
-
-
 
 /* 
 .project-sec .item-2 {
@@ -257,7 +248,6 @@ iframe {
 
 /* project end */
 
-
 /* education start */
 
 .education-sec {
@@ -284,9 +274,7 @@ iframe {
   font-size: 12px;
 }
 
-
 /* education end */
-
 
 /* services start */
 
@@ -334,10 +322,7 @@ iframe {
   border-radius: 0.2rem;
 }
 
-
-
 /* services end */
-
 
 /* contact start */
 
@@ -393,9 +378,7 @@ form .bg-transparent:focus-visible {
   color: white;
 }
 
-
 /* social sec start */
-
 
 .social-icon {
   font-size: 24px;
@@ -421,13 +404,12 @@ form .bg-transparent:focus-visible {
 #contact {
   /* display: none; */
   height: fit-content !;
-  min-height: 150vh !important;
+  /* min-height: 150vh !important; */
 }
-
 
 #home {
   height: fit-content;
-  min-height: 115vh !important;
+  /* min-height: 115vh !important; */
 }
 
 .d-block {
@@ -443,12 +425,11 @@ form .bg-transparent:focus-visible {
   border: 1rem solid transparent;
   transition: border-color 0.3s;
 }
-.experience-sec{
+.experience-sec {
   padding-top: 10rem !important;
-  min-height: 188vh !important;
+  /* min-height: 188vh !important; */
 }
-@media screen and (max-width:991px) {
-
+@media screen and (max-width: 991px) {
   .navbar-nav {
     gap: 0.2rem !important;
   }
@@ -494,7 +475,7 @@ form .bg-transparent:focus-visible {
   #education,
   #services,
   #contact {
-    min-height: 150vh !important;
+    /* min-height: 150vh !important; */
     height: fit-content !important;
   }
 
@@ -502,7 +483,7 @@ form .bg-transparent:focus-visible {
     padding: 2rem 0;
     padding-top: 5rem;
     padding-bottom: 2rem;
-    min-height: 150vh !important;
+    /* min-height: 150vh !important; */
   }
 
   .project-sec #carouselExampleCaptions,
@@ -523,12 +504,12 @@ form .bg-transparent:focus-visible {
   .services-sec .carousel-control-next {
     left: 30%;
   }
-  .experience-sec{
+  .experience-sec {
     padding-top: 5rem;
   }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   .mainProfileImg {
     display: block;
     margin-bottom: 1rem;
@@ -544,8 +525,5 @@ form .bg-transparent:focus-visible {
 
   section {
     scroll-snap-align: none !important;
-
   }
-
-
 }
